@@ -1,26 +1,26 @@
 {
 	"schemaVersion": 1,
-	"id": "client-protection",
+	"id": "crash-protection",
 	"version": "${version}",
-	"name": "client-protection",
-	"description": "Prevents the server from doing harmful things to your client.",
+	"name": "crash-protection",
+	"description": "Prevents the server from crashing you.",
 	"authors": [
 		"Ceptea"
 	],
 	"contact": {
-		"homepage": "https://github.com/Ceptea/client-protection",
-		"sources": "https://github.com/Ceptea/client-protection"
+		"homepage": "https://github.com/Ceptea/crash-protection",
+		"sources": "https://github.com/Ceptea/crash-protection"
 	},
 	"license": "CC0-1.0",
 	"icon": "",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"ceptea.clientprotection.ClientProtectionInit"
+			"ceptea.crashprotection.CrashProtectionInit"
 		]
 	},
 	"mixins": [
-		"client-protection.mixins.json"
+		"crash-protection.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.6",
