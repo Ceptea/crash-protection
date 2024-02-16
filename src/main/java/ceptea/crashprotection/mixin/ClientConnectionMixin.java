@@ -1,6 +1,8 @@
 package ceptea.crashprotection.mixin;
 
 import ceptea.crashprotection.Protection;
+import net.minecraft.client.gui.screen.ChatScreen;
+import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.network.listener.PacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.CloseScreenS2CPacket;
@@ -38,7 +40,9 @@ public class ClientConnectionMixin {
 		}
 		if (packet instanceof CloseScreenS2CPacket) {
 			CloseScreenS2CPacket p = (CloseScreenS2CPacket) packet;
-			ci.cancel();
+			if (Protection.mc.currentScreen instanceof ChatScreen) {
+				ci.cancel();
+			}
 		}
 
 		if (packet instanceof EntityVelocityUpdateS2CPacket) {
