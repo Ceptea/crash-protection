@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ClientProtectionInit implements ModInitializer {
+public class CrashProtectionInit implements ModInitializer {
 
 
 	@Override
