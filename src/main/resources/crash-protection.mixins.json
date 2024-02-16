@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "ceptea.crashprotection.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ClientConnectionMixin",
+		"MinecraftClientMixin",
+		"ParticleS2CPacketAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
