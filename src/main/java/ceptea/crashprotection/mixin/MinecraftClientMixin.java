@@ -9,8 +9,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
-	@Inject(at = @At("HEAD"), method = "tick")
-	private void onTick(CallbackInfo info) {
-		Protection.sinceLastTick = System.currentTimeMillis();
-	}
+    @Inject(at = @At("HEAD"), method = "tick")
+    private void onTick(CallbackInfo info) {
+        Protection.sinceLastTick = System.currentTimeMillis();
+    }
+
+
 }

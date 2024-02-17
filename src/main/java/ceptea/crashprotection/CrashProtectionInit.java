@@ -14,29 +14,27 @@ import java.util.Scanner;
 public class CrashProtectionInit implements ModInitializer {
 
 
-	@Override
-	public void onInitialize() {
-		Protection.INSTANCE.init();
-		File file = new File("protection.t");
+    @Override
+    public void onInitialize() {
+        Protection.INSTANCE.init();
+        File file = new File("protection.t");
         try {
             file.createNewFile();
 
         } catch (IOException e) {
-			Scanner scanner = new Scanner(file.getName());
-			while (scanner.hasNextLine()) {
-				String ln =  scanner.nextLine();
-				
-			}
+            Scanner scanner = new Scanner(file.getName());
+            while (scanner.hasNextLine()) {
+                String ln = scanner.nextLine();
+
+            }
         }
-        KeyBinding guiBind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"Configure!",
-				InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_SEMICOLON,
-				"Client Protection."
-		));
+//        KeyBinding guiBind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+//                "Configure!",
+//                InputUtil.Type.KEYSYM,
+//                GLFW.GLFW_KEY_SEMICOLON,
+//                "Client Protection."
+//        ));
 
 
-
-
-	}
+    }
 }

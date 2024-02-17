@@ -5,7 +5,8 @@
 	"mixins": [
 		"ClientConnectionMixin",
 		"MinecraftClientMixin",
-		"ParticleS2CPacketAccessor"
+		"ParticleS2CPacketAccessor",
+		"WorldMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
