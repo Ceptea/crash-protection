@@ -20,7 +20,7 @@ public enum Protection {
 
     public static double reasonableVelocity = 9999999;
 
-    public static int reasonableParticleLimit = 300;
+    public static int reasonableParticleLimit = 64;
 
     public static double timer = 0;
 
