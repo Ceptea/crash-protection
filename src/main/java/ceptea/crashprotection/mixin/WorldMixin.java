@@ -1,7 +1,6 @@
 package ceptea.crashprotection.mixin;
 
 import ceptea.crashprotection.Protection;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
