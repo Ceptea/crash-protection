@@ -22,6 +22,8 @@ public enum Protection {
 
     public static int reasonableParticleLimit = 64;
 
+    public static int charLimit = 30;
+
     public static double timer = 0;
 
     public static double safetoReEnable = 0;
@@ -41,7 +43,8 @@ public enum Protection {
                 mc.disconnect(new DisconnectedScreen(new TitleScreen(), Text.of("Client Protection"), Text.of("timed out.")));
 
             }
-            if (mc.getCurrentFps() <= 40) {
+            if (mc.getCurrentFps() <= 40 && !Protection.panicMode) {
+                Protection.send("Panic mode enabled.");
                 panicMode = true;
 
             }
@@ -52,7 +55,9 @@ public enum Protection {
             if (System.currentTimeMillis() > safetoReEnable) {
                 safetoReEnable = System.currentTimeMillis() + 5000;
                 panicMode = false;
-                pps = 0;
+
+                Protection.send("Panic disabled");
+
             }
 
         });
