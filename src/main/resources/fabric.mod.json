@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"ceptea.crashprotection.CrashProtectionInit"
+          "ceptea.crashprotection.Main"
 		]
 	},
 	"mixins": [

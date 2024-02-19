@@ -1,5 +1,6 @@
 package ceptea.crashprotection;
 
+
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.DisconnectedScreen;
@@ -18,20 +19,17 @@ public enum Protection {
 
     public static double pps = 0;
 
-    public static double reasonableVelocity = 9999999;
-
-    public static int reasonableParticleLimit = 64;
-
-    public static int charLimit = 30;
-
     public static double timer = 0;
 
     public static double safetoReEnable = 0;
 
     public static boolean panicMode = false;
 
+
+
     public void init() {
         mc = MinecraftClient.getInstance();
+        
         log("Client Protection, is starting.");
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -44,7 +42,6 @@ public enum Protection {
 
             }
             if (mc.getCurrentFps() <= 40 && !Protection.panicMode) {
-                Protection.send("Panic mode enabled.");
                 panicMode = true;
 
             }
@@ -54,9 +51,12 @@ public enum Protection {
             }
             if (System.currentTimeMillis() > safetoReEnable) {
                 safetoReEnable = System.currentTimeMillis() + 5000;
-                panicMode = false;
+                if (panicMode){
 
-                Protection.send("Panic disabled");
+                    panicMode = false;
+
+                }
+
 
             }
 
