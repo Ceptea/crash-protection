@@ -36,7 +36,7 @@ public enum Protection {
             if (!inGame()) {
                 return;
             }
-            if (System.currentTimeMillis() - sinceLastTick > 1000) {
+            if (System.currentTimeMillis() - sinceLastTick > 10000) {
                 mc.world.disconnect();
                 mc.disconnect(new DisconnectedScreen(new TitleScreen(), Text.of("Client Protection"), Text.of("timed out.")));
 
