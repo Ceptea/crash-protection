@@ -21,7 +21,7 @@ public class ClientConnectionMixin {
         if (packet instanceof GameStateChangeS2CPacket p) {
             GameStateChangeS2CPacket.Reason reason = p.getReason();
             if (reason == GameStateChangeS2CPacket.DEMO_MESSAGE_SHOWN) {
-                Protection.mc.player.sendMessage(Text.of("Prevented. illegal demo screen packet."));
+                Protection.mc.player.sendMessage(Text.of("§7[§dCrash Protection§7]§d. illegal demo screen packet."),true);
 
                 ci.cancel();
             }
