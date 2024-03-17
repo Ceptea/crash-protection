@@ -6,7 +6,7 @@ public class    Settings {
 
     public static int reasonableParticleLimit = 64;
 
-    public static int charLimit = 30;
+    public static int charLimit = 5000;
 
 
 

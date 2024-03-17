@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Ceptea/crash-protection"
 	},
 	"license": "CC0-1.0",
-	"icon": "",
+	"icon": "assets/crash-protection/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
